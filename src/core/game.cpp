@@ -10,37 +10,23 @@ using namespace std;
 
 
 
-bool game::checkMove(piece const& p){
+bool game::checkMove(piece const& p, move m){
     return p.isMoveOk();
 }
 
 void game::setStartPosition(){
 
 
-/*
-    pawn pw[8];
-    pawn pb[8];
-
-    bishop bw[2];
-    bishop bb[2];
-    knight nw[2];
-    knight nb[2];
-    king kw;
-    king kb;
-    queen qw;
-    queen qb;
-*/
-
 //pawns
     for(int i = 0; i<8; i++){
 
-        //m_board[i][1].setHasPiece(1);
-        //m_board[i][1].setPiece(&pw[i]);
-        //m_board[i][6].setHasPiece(1);
-        //m_board[i][6].setPiece(&pb[i]);
+        m_board[i][1].setHasPiece(1);
+        m_board[i][1].setPiece(&this->m_pw[i]);
+        m_board[i][6].setHasPiece(1);
+        m_board[i][6].setPiece(&this->m_pb[i]);
 
-        //m_board[i][0].setHasPiece(1);
-        //m_board[i][7].setHasPiece(1);
+        m_board[i][0].setHasPiece(1);
+        m_board[i][7].setHasPiece(1);
 
     }
 
@@ -50,32 +36,29 @@ void game::setStartPosition(){
     m_board[0][7].setPiece(&this->m_rb[0]);
     m_board[7][0].setPiece(&this->m_rw[1]);
     m_board[7][7].setPiece(&this->m_rb[1]);
-    m_board[0][0].setHasPiece(1);
-    m_board[0][7].setHasPiece(1);
-    m_board[7][0].setHasPiece(1);
-    m_board[7][7].setHasPiece(1);
 
 
-/*
+
+
 //bishops
-    m_board[2][0].setPiece(bw[0]);
-    m_board[2][7].setPiece(bb[0]);
-    m_board[5][0].setPiece(bw[1]);
-    m_board[5][7].setPiece(bb[1]);
+    m_board[2][0].setPiece(&this->m_bw[0]);
+    m_board[2][7].setPiece(&this->m_bb[0]);
+    m_board[5][0].setPiece(&this->m_bw[1]);
+    m_board[5][7].setPiece(&this->m_bb[1]);
 
 //knights
-    m_board[1][0].setPiece(nw[0]);
-    m_board[1][7].setPiece(nb[0]);
-    m_board[6][0].setPiece(nw[1]);
-    m_board[6][7].setPiece(nb[1]);
+    m_board[1][0].setPiece(&this->m_nw[0]);
+    m_board[1][7].setPiece(&this->m_nb[0]);
+    m_board[6][0].setPiece(&this->m_nw[1]);
+    m_board[6][7].setPiece(&this->m_nb[1]);
 
 //queen/king
-    m_board[3][0].setPiece(qw);
-    m_board[3][7].setPiece(qb);
-    m_board[4][0].setPiece(kw);
-    m_board[4][7].setPiece(kb);
+    m_board[3][0].setPiece(&this->m_qw);
+    m_board[3][7].setPiece(&this->m_qb);
+    m_board[4][0].setPiece(&this->m_kw);
+    m_board[4][7].setPiece(&this->m_kb);
 
-*/
+
 }
 
 game::game()
@@ -104,8 +87,8 @@ void game::castMove(move nextMove)
 
     rook test;
 
-    //if(checkMove(*nextMove.getPiece())){
-    if(checkMove(test)){
+    if(checkMove(*nextMove.getPiece(), nextMove)){
+    //if(checkMove(test)){
         getMoveList().push_back(nextMove);
         m_board[nextMove.getStartPos().getPosX()][nextMove.getStartPos().getPosY()].setHasPiece(0);
         /*

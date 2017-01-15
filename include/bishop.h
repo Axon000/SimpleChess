@@ -2,8 +2,7 @@
 #define BISHOP_H
 
 #include "piece.h"
-#include "game.h"
-#include "move.h"
+
 
 
 class bishop : public piece
@@ -11,7 +10,7 @@ class bishop : public piece
     public:
         bishop();
         virtual ~bishop();
-        bool isMoveOk(game game1, move move1);
+        virtual bool isMoveOk() const;
     protected:
     private:
 };

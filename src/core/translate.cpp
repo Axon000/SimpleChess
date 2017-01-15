@@ -4,7 +4,6 @@
 #include "translate.h"
 #include "game.h"
 
-using namespace std;
 
 move translate(std::string input, game game1){
 

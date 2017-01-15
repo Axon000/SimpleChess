@@ -1,3 +1,4 @@
+#include <iostream>
 #include "pawn.h"
 
 pawn::pawn()
@@ -10,4 +11,10 @@ pawn::pawn()
 pawn::~pawn()
 {
     //dtor
+}
+
+bool pawn::isMoveOk() const
+{
+    std::cout << "call in pawn" << std::endl;
+    return 1;
 }

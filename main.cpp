@@ -13,13 +13,6 @@ int main()
     string input;
     move nextmove;
 
-
-
-
-
-
-
-
     printBoard(game1);
     cin >> input;
 

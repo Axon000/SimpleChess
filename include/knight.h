@@ -2,8 +2,7 @@
 #define KNIGHT_H
 
 #include "piece.h"
-#include "game.h"
-#include "move.h"
+
 
 
 class knight : public piece
@@ -11,7 +10,7 @@ class knight : public piece
     public:
         knight();
         virtual ~knight();
-        bool isMoveOk(game game1, move move1);
+        virtual bool isMoveOk() const;
     protected:
     private:
 };
