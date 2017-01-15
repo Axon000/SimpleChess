@@ -1,0 +1,140 @@
+# depslib dependency file v1.0
+1484485521 source:/home/antoine/cpp/SimpleChess/main.cpp
+	<iostream>
+	"game.h"
+	"move.h"
+	"translate.h"
+	"printBoard.h"
+
+1484480926 /home/antoine/cpp/SimpleChess/include/game.h
+	<vector>
+	"move.h"
+	"square.h"
+	"piece.h"
+
+1484073766 /home/antoine/cpp/SimpleChess/include/move.h
+	"square.h"
+	"piece.h"
+	<string>
+
+1484485946 /home/antoine/cpp/SimpleChess/include/square.h
+	"piece.h"
+
+1484481069 /home/antoine/cpp/SimpleChess/include/piece.h
+
+1483994705 /home/antoine/cpp/SimpleChess/include/translate.h
+	"move.h"
+	"game.h"
+
+1484071731 source:/home/antoine/cpp/SimpleChess/src/game.cpp
+	"game.h"
+
+1484071775 source:/home/antoine/cpp/SimpleChess/src/move.cpp
+	"move.h"
+
+1484071798 source:/home/antoine/cpp/SimpleChess/src/piece.cpp
+	"piece.h"
+
+1483996430 source:/home/antoine/cpp/SimpleChess/src/square.cpp
+	"square.h"
+
+1483995535 source:/home/antoine/cpp/SimpleChess/src/translate.cpp
+	<string>
+	<cstring>
+	"translate.h"
+	"game.h"
+
+1483996219 /home/antoine/cpp/SimpleChess/include/printBoard.h
+	"game.h"
+	"square.h"
+
+1483996725 source:/home/antoine/cpp/SimpleChess/src/printBoard.cpp
+	<iostream>
+	"game.h"
+	"square.h"
+
+1484475434 source:/home/antoine/cpp/SimpleChess/src/core/move.cpp
+	"move.h"
+	"square.h"
+	"piece.h"
+
+1484483440 source:/home/antoine/cpp/SimpleChess/src/core/printBoard.cpp
+	<iostream>
+	"game.h"
+	"square.h"
+
+1484477466 source:/home/antoine/cpp/SimpleChess/src/core/translate.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"translate.h"
+	"game.h"
+
+1484483992 source:/home/antoine/cpp/SimpleChess/src/core/game.cpp
+	<iostream>
+	"game.h"
+	"pawn.h"
+	"rook.h"
+	"queen.h"
+	"king.h"
+	"bishop.h"
+	"knight.h"
+	"square.h"
+
+1484072232 /home/antoine/cpp/SimpleChess/include/pawn.h
+	"piece.h"
+	"game.h"
+	"move.h"
+
+1484075593 source:/home/antoine/cpp/SimpleChess/src/core/pawn.cpp
+	"pawn.h"
+
+1484485354 source:/home/antoine/cpp/SimpleChess/src/core/piece.cpp
+	<iostream>
+	"piece.h"
+
+1484485485 source:/home/antoine/cpp/SimpleChess/src/core/square.cpp
+	<iostream>
+	"square.h"
+
+1484078106 source:/home/antoine/cpp/SimpleChess/src/core/bishop.cpp
+	"bishop.h"
+
+1484078578 /home/antoine/cpp/SimpleChess/include/bishop.h
+	"piece.h"
+	"game.h"
+	"move.h"
+
+1484481599 /home/antoine/cpp/SimpleChess/include/rook.h
+	"piece.h"
+	"game.h"
+	"move.h"
+
+1484078704 /home/antoine/cpp/SimpleChess/include/queen.h
+	"piece.h"
+	"game.h"
+	"move.h"
+
+1484078682 /home/antoine/cpp/SimpleChess/include/king.h
+	"piece.h"
+	"game.h"
+	"move.h"
+
+1484078682 /home/antoine/cpp/SimpleChess/include/knight.h
+	"piece.h"
+	"game.h"
+	"move.h"
+
+1484078131 source:/home/antoine/cpp/SimpleChess/src/core/king.cpp
+	"king.h"
+
+1484078099 source:/home/antoine/cpp/SimpleChess/src/core/knight.cpp
+	"knight.h"
+
+1484078120 source:/home/antoine/cpp/SimpleChess/src/core/queen.cpp
+	"queen.h"
+
+1484481599 source:/home/antoine/cpp/SimpleChess/src/core/rook.cpp
+	<iostream>
+	"rook.h"
+
