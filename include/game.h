@@ -3,7 +3,9 @@
 #include <vector>
 #include "move.h"
 #include "square.h"
+#include "rook.h"
 #include "piece.h"
+
 
 
 
@@ -25,6 +27,8 @@ class game
     private:
         std::vector<move> m_moveList;
         square m_board[8][8];
+        rook m_rw[2];
+        rook m_rb[2];
 };
 
 #endif // GAME_H

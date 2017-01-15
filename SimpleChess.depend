@@ -1,26 +1,27 @@
 # depslib dependency file v1.0
-1484485521 source:/home/antoine/cpp/SimpleChess/main.cpp
+1484501938 source:/home/antoine/cpp/SimpleChess/main.cpp
 	<iostream>
 	"game.h"
 	"move.h"
 	"translate.h"
 	"printBoard.h"
 
-1484480926 /home/antoine/cpp/SimpleChess/include/game.h
+1484500797 /home/antoine/cpp/SimpleChess/include/game.h
 	<vector>
 	"move.h"
 	"square.h"
+	"rook.h"
 	"piece.h"
 
-1484073766 /home/antoine/cpp/SimpleChess/include/move.h
+1484488090 /home/antoine/cpp/SimpleChess/include/move.h
 	"square.h"
 	"piece.h"
 	<string>
 
-1484485946 /home/antoine/cpp/SimpleChess/include/square.h
+1484488066 /home/antoine/cpp/SimpleChess/include/square.h
 	"piece.h"
 
-1484481069 /home/antoine/cpp/SimpleChess/include/piece.h
+1484487234 /home/antoine/cpp/SimpleChess/include/piece.h
 
 1483994705 /home/antoine/cpp/SimpleChess/include/translate.h
 	"move.h"
@@ -53,12 +54,12 @@
 	"game.h"
 	"square.h"
 
-1484475434 source:/home/antoine/cpp/SimpleChess/src/core/move.cpp
+1484488449 source:/home/antoine/cpp/SimpleChess/src/core/move.cpp
 	"move.h"
 	"square.h"
 	"piece.h"
 
-1484483440 source:/home/antoine/cpp/SimpleChess/src/core/printBoard.cpp
+1484502174 source:/home/antoine/cpp/SimpleChess/src/core/printBoard.cpp
 	<iostream>
 	"game.h"
 	"square.h"
@@ -70,16 +71,14 @@
 	"translate.h"
 	"game.h"
 
-1484483992 source:/home/antoine/cpp/SimpleChess/src/core/game.cpp
+1484502009 source:/home/antoine/cpp/SimpleChess/src/core/game.cpp
 	<iostream>
+	<vector>
 	"game.h"
-	"pawn.h"
-	"rook.h"
-	"queen.h"
-	"king.h"
-	"bishop.h"
-	"knight.h"
+	"move.h"
 	"square.h"
+	"rook.h"
+	"piece.h"
 
 1484072232 /home/antoine/cpp/SimpleChess/include/pawn.h
 	"piece.h"
@@ -89,11 +88,11 @@
 1484075593 source:/home/antoine/cpp/SimpleChess/src/core/pawn.cpp
 	"pawn.h"
 
-1484485354 source:/home/antoine/cpp/SimpleChess/src/core/piece.cpp
+1484487234 source:/home/antoine/cpp/SimpleChess/src/core/piece.cpp
 	<iostream>
 	"piece.h"
 
-1484485485 source:/home/antoine/cpp/SimpleChess/src/core/square.cpp
+1484501182 source:/home/antoine/cpp/SimpleChess/src/core/square.cpp
 	<iostream>
 	"square.h"
 
@@ -105,10 +104,8 @@
 	"game.h"
 	"move.h"
 
-1484481599 /home/antoine/cpp/SimpleChess/include/rook.h
+1484500905 /home/antoine/cpp/SimpleChess/include/rook.h
 	"piece.h"
-	"game.h"
-	"move.h"
 
 1484078704 /home/antoine/cpp/SimpleChess/include/queen.h
 	"piece.h"

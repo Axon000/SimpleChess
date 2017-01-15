@@ -20,5 +20,5 @@ square move::getEndPos() { return m_endPos; }
 void move::setEndPos(square val) { m_endPos = val; }
 std::string move::getCode() { return m_code; }
 void move::setCode(std::string val) { m_code = val; }
-piece move::getPiece() { return m_piece; }
-void move::setPiece(piece val) { m_piece = val; }
+piece* move::getPiece() { return m_piece; }
+void move::setPiece(piece* val) { m_piece = val; }

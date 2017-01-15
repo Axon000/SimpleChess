@@ -2,8 +2,7 @@
 #define ROOK_H
 
 #include "piece.h"
-#include "game.h"
-#include "move.h"
+
 
 
 class rook : public piece

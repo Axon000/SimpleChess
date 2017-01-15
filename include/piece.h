@@ -20,7 +20,7 @@ class piece
 
         char getLabel();
         void setLabel(char lab);
-        virtual bool isMoveOk() const;
+        virtual bool isMoveOk() const = 0;
     protected:
     private:
         //int m_posX;

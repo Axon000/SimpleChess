@@ -13,12 +13,14 @@ piece::~piece()
     //std::cout << "call to destructor" << std::endl;
 }
 
+/*
 bool piece::isMoveOk() const
 {
     std::cout << "call in piece" << std::endl;
 
     return 1;
 }
+*/
 
 
 /*

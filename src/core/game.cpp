@@ -1,12 +1,12 @@
 #include <iostream>
+#include <vector>
 #include "game.h"
-#include "pawn.h"
-#include "rook.h"
-#include "queen.h"
-#include "king.h"
-#include "bishop.h"
-#include "knight.h"
+#include "move.h"
 #include "square.h"
+#include "rook.h"
+#include "piece.h"
+
+using namespace std;
 
 
 
@@ -17,10 +17,10 @@ bool game::checkMove(piece const& p){
 void game::setStartPosition(){
 
 
+/*
     pawn pw[8];
     pawn pb[8];
-    rook rw[2];
-    rook rb[2];
+
     bishop bw[2];
     bishop bb[2];
     knight nw[2];
@@ -29,27 +29,34 @@ void game::setStartPosition(){
     king kb;
     queen qw;
     queen qb;
-
+*/
 
 //pawns
     for(int i = 0; i<8; i++){
 
-        m_board[i][1].setHasPiece(1);
-        m_board[i][1].setPiece(pw[i]);
-        m_board[i][6].setHasPiece(1);
-        m_board[i][6].setPiece(pb[i]);
+        //m_board[i][1].setHasPiece(1);
+        //m_board[i][1].setPiece(&pw[i]);
+        //m_board[i][6].setHasPiece(1);
+        //m_board[i][6].setPiece(&pb[i]);
 
-        m_board[i][0].setHasPiece(1);
-        m_board[i][7].setHasPiece(1);
+        //m_board[i][0].setHasPiece(1);
+        //m_board[i][7].setHasPiece(1);
 
     }
 
-//rooks
-    m_board[0][0].setPiece(rw[0]);
-    m_board[0][7].setPiece(rb[0]);
-    m_board[7][0].setPiece(rw[1]);
-    m_board[7][7].setPiece(rb[1]);
 
+//rooks
+    m_board[0][0].setPiece(&this->m_rw[0]);
+    m_board[0][7].setPiece(&this->m_rb[0]);
+    m_board[7][0].setPiece(&this->m_rw[1]);
+    m_board[7][7].setPiece(&this->m_rb[1]);
+    m_board[0][0].setHasPiece(1);
+    m_board[0][7].setHasPiece(1);
+    m_board[7][0].setHasPiece(1);
+    m_board[7][7].setHasPiece(1);
+
+
+/*
 //bishops
     m_board[2][0].setPiece(bw[0]);
     m_board[2][7].setPiece(bb[0]);
@@ -68,10 +75,12 @@ void game::setStartPosition(){
     m_board[4][0].setPiece(kw);
     m_board[4][7].setPiece(kb);
 
+*/
 }
 
 game::game()
 {
+
     for(int i=0; i<8; i++){
         for(int j=0; j<8; j++){
             m_board[i][j].setPosX(i);
@@ -95,8 +104,8 @@ void game::castMove(move nextMove)
 
     rook test;
 
-    if(checkMove(nextMove.getPiece())){
-    //if(checkMove(test)){
+    //if(checkMove(*nextMove.getPiece())){
+    if(checkMove(test)){
         getMoveList().push_back(nextMove);
         m_board[nextMove.getStartPos().getPosX()][nextMove.getStartPos().getPosY()].setHasPiece(0);
         /*

@@ -14,12 +14,8 @@ int main()
     move nextmove;
 
 
-    cout << game1.getSquareAt(0,0).getPiece().getLabel() << endl;
-    cout << game1.getSquareAt(0,0).getPiece().getLabel() << endl;
 
-    cout << game1.getSquareAt(0,0).getPiece().getLabel() << endl;
-    cout << game1.getSquareAt(3,1).getPiece().getLabel() << endl;
-    cout << game1.getSquareAt(3,1).getPiece().getLabel() << endl;
+
 
 
 
