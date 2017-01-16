@@ -13,8 +13,6 @@
 
 
 
-
-
 class game
 {
     public:
@@ -28,22 +26,23 @@ class game
         bool checkMove(piece const& p, move m);
 
 
+
     protected:
     private:
         std::vector<move> m_moveList;
         square m_board[8][8];
-        rook m_rw[2];
-        rook m_rb[2];
-        pawn m_pw[8];
-        pawn m_pb[8];
-        bishop m_bw[2];
-        bishop m_bb[2];
-        knight m_nw[2];
-        knight m_nb[2];
-        king m_kw;
-        king m_kb;
-        queen m_qw;
-        queen m_qb;
+        std::vector<rook*> m_rw;
+        std::vector<rook*> m_rb;
+        std::vector<pawn*> m_pw;
+        std::vector<pawn*> m_pb;
+        std::vector<bishop*> m_bw;
+        std::vector<bishop*> m_bb;
+        std::vector<knight*> m_nw;
+        std::vector<knight*> m_nb;
+        std::vector<king*> m_kw;
+        std::vector<king*> m_kb;
+        std::vector<queen*> m_qw;
+        std::vector<queen*> m_qb;
 };
 
 #endif // GAME_H

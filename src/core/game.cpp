@@ -14,16 +14,28 @@ bool game::checkMove(piece const& p, move m){
     return p.isMoveOk();
 }
 
+
+
 void game::setStartPosition(){
 
 
 //pawns
+
+
+
     for(int i = 0; i<8; i++){
 
+
+        m_pw.push_back(new pawn());
         m_board[i][1].setHasPiece(1);
-        m_board[i][1].setPiece(&this->m_pw[i]);
+        m_board[i][1].setPiece(m_pw[i]);
+        m_pb.push_back(new pawn());
         m_board[i][6].setHasPiece(1);
-        m_board[i][6].setPiece(&this->m_pb[i]);
+        m_board[i][6].setPiece(m_pb[i]);
+
+
+        //addPiece(m_pw, new piece(pawn()), i, 1);
+        //addPiece(m_pb, new piece(pawn()), i, 6);
 
         m_board[i][0].setHasPiece(1);
         m_board[i][7].setHasPiece(1);
@@ -32,31 +44,52 @@ void game::setStartPosition(){
 
 
 //rooks
-    m_board[0][0].setPiece(&this->m_rw[0]);
-    m_board[0][7].setPiece(&this->m_rb[0]);
-    m_board[7][0].setPiece(&this->m_rw[1]);
-    m_board[7][7].setPiece(&this->m_rb[1]);
 
-
-
+    m_rw.push_back(new rook());
+    m_rb.push_back(new rook());
+    m_rw.push_back(new rook());
+    m_rb.push_back(new rook());
+    m_board[0][0].setPiece(m_rw[0]);
+    m_board[0][7].setPiece(m_rb[0]);
+    m_board[7][0].setPiece(m_rw[1]);
+    m_board[7][7].setPiece(m_rb[1]);
 
 //bishops
-    m_board[2][0].setPiece(&this->m_bw[0]);
-    m_board[2][7].setPiece(&this->m_bb[0]);
-    m_board[5][0].setPiece(&this->m_bw[1]);
-    m_board[5][7].setPiece(&this->m_bb[1]);
+
+    m_bw.push_back(new bishop());
+    m_bb.push_back(new bishop());
+    m_bw.push_back(new bishop());
+    m_bb.push_back(new bishop());
+    m_board[2][0].setPiece(m_bw[0]);
+    m_board[2][7].setPiece(m_bb[0]);
+    m_board[5][0].setPiece(m_bw[1]);
+    m_board[5][7].setPiece(m_bb[1]);
+
 
 //knights
-    m_board[1][0].setPiece(&this->m_nw[0]);
-    m_board[1][7].setPiece(&this->m_nb[0]);
-    m_board[6][0].setPiece(&this->m_nw[1]);
-    m_board[6][7].setPiece(&this->m_nb[1]);
+
+    m_nw.push_back(new knight());
+    m_nb.push_back(new knight());
+    m_nw.push_back(new knight());
+    m_nb.push_back(new knight());
+    m_board[1][0].setPiece(m_nw[0]);
+    m_board[1][7].setPiece(m_nb[0]);
+    m_board[6][0].setPiece(m_nw[1]);
+    m_board[6][7].setPiece(m_nb[1]);
+
 
 //queen/king
-    m_board[3][0].setPiece(&this->m_qw);
-    m_board[3][7].setPiece(&this->m_qb);
-    m_board[4][0].setPiece(&this->m_kw);
-    m_board[4][7].setPiece(&this->m_kb);
+
+    m_qw.push_back(new queen());
+    m_qb.push_back(new queen());
+    m_kw.push_back(new king());
+    m_kb.push_back(new king());
+    m_board[3][0].setPiece(m_qw[0]);
+    m_board[3][7].setPiece(m_qb[0]);
+    m_board[4][0].setPiece(m_kw[0]);
+    m_board[4][7].setPiece(m_kb[0]);
+
+
 
 
 }
