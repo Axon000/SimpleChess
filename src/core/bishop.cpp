@@ -12,7 +12,7 @@ bishop::~bishop()
     //dtor
 }
 
-bool bishop::isMoveOk() const
+bool bishop::isMoveOk(game* g, cmove* m) const
 {
     std::cout << "call in bishop" << std::endl;
     return 1;

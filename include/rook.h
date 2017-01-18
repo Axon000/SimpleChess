@@ -5,13 +5,12 @@
 
 
 
-
 class rook : public piece
 {
     public:
         rook();
         virtual ~rook();
-        virtual bool isMoveOk() const;
+        virtual bool isMoveOk(game* g, cmove* m) const;
     protected:
     private:
 };

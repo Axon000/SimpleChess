@@ -9,7 +9,7 @@ class queen : public piece
     public:
         queen();
         virtual ~queen();
-        virtual bool isMoveOk() const;
+        virtual bool isMoveOk(game* g, cmove* m) const;
     protected:
     private:
 };

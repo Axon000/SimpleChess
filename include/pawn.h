@@ -10,7 +10,7 @@ class pawn : public piece
     public:
         pawn();
         virtual ~pawn();
-        virtual bool isMoveOk() const;
+        virtual bool isMoveOk(game* g, cmove* m) const;
     protected:
     private:
 };

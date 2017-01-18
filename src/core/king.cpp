@@ -12,7 +12,7 @@ king::~king()
     //dtor
 }
 
-bool king::isMoveOk() const
+bool king::isMoveOk(game* g, cmove* m) const
 {
     std::cout << "call in king" << std::endl;
     return 1;

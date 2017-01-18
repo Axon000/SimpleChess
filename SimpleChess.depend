@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1484504222 source:/home/antoine/cpp/SimpleChess/main.cpp
+1484671723 source:/home/antoine/cpp/SimpleChess/main.cpp
 	<iostream>
 	"game.h"
-	"move.h"
+	"cmove.h"
 	"translate.h"
 	"printBoard.h"
 
-1484598056 /home/antoine/cpp/SimpleChess/include/game.h
+1484734795 /home/antoine/cpp/SimpleChess/include/game.h
 	<vector>
-	"move.h"
+	"cmove.h"
 	"square.h"
 	"rook.h"
 	"pawn.h"
@@ -26,10 +26,10 @@
 1484488066 /home/antoine/cpp/SimpleChess/include/square.h
 	"piece.h"
 
-1484505479 /home/antoine/cpp/SimpleChess/include/piece.h
+1484680743 /home/antoine/cpp/SimpleChess/include/piece.h
 
-1483994705 /home/antoine/cpp/SimpleChess/include/translate.h
-	"move.h"
+1484671716 /home/antoine/cpp/SimpleChess/include/translate.h
+	"cmove.h"
 	"game.h"
 
 1484071731 source:/home/antoine/cpp/SimpleChess/src/game.cpp
@@ -69,69 +69,94 @@
 	"game.h"
 	"square.h"
 
-1484503918 source:/home/antoine/cpp/SimpleChess/src/core/translate.cpp
+1484672081 source:/home/antoine/cpp/SimpleChess/src/core/translate.cpp
 	<iostream>
 	<string>
 	<cstring>
 	"translate.h"
 	"game.h"
 
-1484594991 source:/home/antoine/cpp/SimpleChess/src/core/game.cpp
+1484734820 source:/home/antoine/cpp/SimpleChess/src/core/game.cpp
 	<iostream>
 	<vector>
 	"game.h"
-	"move.h"
+	"cmove.h"
 	"square.h"
 	"rook.h"
 	"piece.h"
 
-1484503320 /home/antoine/cpp/SimpleChess/include/pawn.h
+1484680386 /home/antoine/cpp/SimpleChess/include/pawn.h
 	"piece.h"
 
-1484504269 source:/home/antoine/cpp/SimpleChess/src/core/pawn.cpp
+1484723881 source:/home/antoine/cpp/SimpleChess/src/core/pawn.cpp
 	<iostream>
 	"pawn.h"
+	"cmove.h"
+	"game.h"
 
-1484591461 source:/home/antoine/cpp/SimpleChess/src/core/piece.cpp
+1484734946 source:/home/antoine/cpp/SimpleChess/src/core/piece.cpp
 	<iostream>
 	"piece.h"
+	"cmove.h"
+	"game.h"
+	"isChecked.h"
 
 1484501182 source:/home/antoine/cpp/SimpleChess/src/core/square.cpp
 	<iostream>
 	"square.h"
 
-1484504249 source:/home/antoine/cpp/SimpleChess/src/core/bishop.cpp
+1484680500 source:/home/antoine/cpp/SimpleChess/src/core/bishop.cpp
 	<iostream>
 	"bishop.h"
 
-1484503365 /home/antoine/cpp/SimpleChess/include/bishop.h
+1484680437 /home/antoine/cpp/SimpleChess/include/bishop.h
 	"piece.h"
 
-1484505394 /home/antoine/cpp/SimpleChess/include/rook.h
+1484680437 /home/antoine/cpp/SimpleChess/include/rook.h
 	"piece.h"
 
-1484503385 /home/antoine/cpp/SimpleChess/include/queen.h
+1484680437 /home/antoine/cpp/SimpleChess/include/queen.h
 	"piece.h"
 
-1484503376 /home/antoine/cpp/SimpleChess/include/king.h
+1484680437 /home/antoine/cpp/SimpleChess/include/king.h
 	"piece.h"
 
-1484503334 /home/antoine/cpp/SimpleChess/include/knight.h
+1484680437 /home/antoine/cpp/SimpleChess/include/knight.h
 	"piece.h"
 
-1484504257 source:/home/antoine/cpp/SimpleChess/src/core/king.cpp
+1484680500 source:/home/antoine/cpp/SimpleChess/src/core/king.cpp
 	<iostream>
 	"king.h"
 
-1484504263 source:/home/antoine/cpp/SimpleChess/src/core/knight.cpp
+1484680500 source:/home/antoine/cpp/SimpleChess/src/core/knight.cpp
 	<iostream>
 	"knight.h"
 
-1484504274 source:/home/antoine/cpp/SimpleChess/src/core/queen.cpp
+1484680500 source:/home/antoine/cpp/SimpleChess/src/core/queen.cpp
 	<iostream>
 	"queen.h"
 
-1484505764 source:/home/antoine/cpp/SimpleChess/src/core/rook.cpp
+1484680500 source:/home/antoine/cpp/SimpleChess/src/core/rook.cpp
 	<iostream>
 	"rook.h"
+
+1484678067 /home/antoine/cpp/SimpleChess/include/cmove.h
+	"square.h"
+	"piece.h"
+	<string>
+
+1484671729 source:/home/antoine/cpp/SimpleChess/src/core/cmove.cpp
+	"cmove.h"
+	"square.h"
+	"piece.h"
+
+1484734795 source:/home/antoine/cpp/SimpleChess/src/core/isChecked.cpp
+	<iostream>
+	"isChecked.h"
+	"king.h"
+	"game.h"
+
+1484734795 /home/antoine/cpp/SimpleChess/include/isChecked.h
+	"king.h"
+	"game.h"
 

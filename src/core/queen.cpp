@@ -12,7 +12,7 @@ queen::~queen()
     //dtor
 }
 
-bool queen::isMoveOk() const
+bool queen::isMoveOk(game* g, cmove* m) const
 {
     std::cout << "call in queen" << std::endl;
     return 1;

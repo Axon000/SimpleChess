@@ -12,7 +12,7 @@ rook::~rook()
     //dtor
 }
 
-bool rook::isMoveOk() const
+bool rook::isMoveOk(game* g, cmove* m) const
 {
     std::cout << "call in rook" << std::endl;
     return 1;

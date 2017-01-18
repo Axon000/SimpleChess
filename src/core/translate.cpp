@@ -5,9 +5,9 @@
 #include "game.h"
 
 
-move translate(std::string input, game game1){
+cmove translate(std::string input, game game1){
 
-    move output;
+    cmove output;
     char abc[]="abcdefgh";
     char s123[]="12345678";
 

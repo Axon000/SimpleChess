@@ -10,7 +10,7 @@ class king : public piece
     public:
         king();
         virtual ~king();
-        virtual bool isMoveOk() const;
+        virtual bool isMoveOk(game* g, cmove* m) const;
     protected:
     private:
 };

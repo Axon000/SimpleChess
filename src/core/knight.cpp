@@ -12,7 +12,7 @@ knight::~knight()
     //dtor
 }
 
-bool knight::isMoveOk() const
+bool knight::isMoveOk(game* g, cmove* m) const
 {
     std::cout << "call in knight" << std::endl;
     return 1;

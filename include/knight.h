@@ -10,7 +10,7 @@ class knight : public piece
     public:
         knight();
         virtual ~knight();
-        virtual bool isMoveOk() const;
+        virtual bool isMoveOk(game* g, cmove* m) const;
     protected:
     private:
 };

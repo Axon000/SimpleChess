@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include <vector>
-#include "move.h"
+#include "cmove.h"
 #include "square.h"
 #include "rook.h"
 #include "pawn.h"
@@ -12,25 +12,32 @@
 #include "piece.h"
 
 
-
 class game
 {
     public:
         game();
         virtual ~game();
-        std::vector<move> getMoveList();
-        void setMoveList(std::vector<move> val);
+        std::vector<cmove> getMoveList();
+        void setMoveList(std::vector<cmove> val);
         square getSquareAt(int posX, int posY);
-        void castMove(move nextMove);
+        void castMove(cmove nextcmove);
         void setStartPosition();
-        bool checkMove(piece const& p, move m);
+        bool checkMove(piece const& p, cmove m);
+        bool isChecked(bool whitetoplay);
+        bool getWhiteToPlay();
+        void addMove(cmove m);
+        king getPlayerKing();
 
 
 
     protected:
     private:
-        std::vector<move> m_moveList;
+        std::vector<cmove> m_moveList;
         square m_board[8][8];
+        bool m_whitetoplay;
+        bool m_whiteHasRooked;
+        bool m_blackHasRooked;
+        bool m_kingChecked;
         std::vector<rook*> m_rw;
         std::vector<rook*> m_rb;
         std::vector<pawn*> m_pw;
@@ -39,10 +46,10 @@ class game
         std::vector<bishop*> m_bb;
         std::vector<knight*> m_nw;
         std::vector<knight*> m_nb;
-        std::vector<king*> m_kw;
-        std::vector<king*> m_kb;
         std::vector<queen*> m_qw;
         std::vector<queen*> m_qb;
+        king* m_kw;
+        king* m_kb;
 };
 
 #endif // GAME_H

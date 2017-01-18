@@ -1,6 +1,6 @@
 #include <iostream>
 #include "game.h"
-#include "move.h"
+#include "cmove.h"
 #include "translate.h"
 #include "printBoard.h"
 
@@ -11,7 +11,7 @@ int main()
 
     game game1;
     string input;
-    move nextmove;
+    cmove nextmove;
 
     printBoard(game1);
     cin >> input;
