@@ -14,6 +14,5 @@ queen::~queen()
 
 bool queen::isMoveOk(game* g, cmove* m) const
 {
-    std::cout << "call in queen" << std::endl;
-    return 1;
+    return 0;
 }

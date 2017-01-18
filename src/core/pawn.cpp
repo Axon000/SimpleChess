@@ -20,11 +20,11 @@ pawn::~pawn()
 /* return true if the move given in argument is ok in the game provided. */
 bool pawn::isMoveOk(game* g, cmove* m) const
 {
-    std::cout << "call in pawn" << std::endl;
     bool output = 0;
 
     /*if parent test is not ok, the move is not ok. piece::isMoveOk tests if there is a piece of good type at start point,
     if move suppress an existing check, and if the piece is of the good color */
+
 
     if(piece::isMoveOk(g, m)){
         int startX = m->getStartPos().getPosX();

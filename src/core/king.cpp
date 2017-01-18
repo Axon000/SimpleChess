@@ -14,6 +14,5 @@ king::~king()
 
 bool king::isMoveOk(game* g, cmove* m) const
 {
-    std::cout << "call in king" << std::endl;
-    return 1;
+    return 0;
 }

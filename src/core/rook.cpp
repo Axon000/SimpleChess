@@ -14,6 +14,5 @@ rook::~rook()
 
 bool rook::isMoveOk(game* g, cmove* m) const
 {
-    std::cout << "call in rook" << std::endl;
-    return 1;
+    return 0;
 }

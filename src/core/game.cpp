@@ -5,6 +5,7 @@
 #include "square.h"
 #include "rook.h"
 #include "piece.h"
+#include "isChecked.h"
 
 using namespace std;
 
@@ -12,8 +13,36 @@ using namespace std;
 
 bool game::checkMove(piece const& p, cmove m){
 
-    return p.isMoveOk(this, &m);
+    bool output = p.isMoveOk(this, &m);
 
+    /* Have to check if king is checked after move here, and not in piece.cpp, because isChecked() perform a test on other team all possible nextMove
+    by using piece.cpp isMoveOk() method. If white is checked on this move (so that this move is not really possible according to the rules (you can't uncover
+    your king)) by a piece that would uncover it's own king to eat white king, it is still a check, but the programm would have consider it an invalid eat, and
+    would have said that white king is not checked, and the move ok. Puting the test here solve this problem.
+    */
+    game cpy = *this;
+    cpy.addMove(m);
+    //cpy.setWhiteToPlay(!cpy.getWhiteToPlay());
+    square kingSqr = this->getPlayerKingSquare() ;
+    if(output && isChecked(kingSqr, cpy)){
+        output = 0;
+    }
+
+    return output;
+
+}
+
+square game::getPlayerKingSquare() {
+    for(int i=0; i<8 ; i++){
+        for(int j=0; j<8; j++){
+            if(m_whitetoplay && this->getSquareAt(i,j).getHasPiece() && this->getSquareAt(i,j).getPiece() == m_kw){
+                return this->getSquareAt(i,j);
+            }
+            else if(!m_whitetoplay && this->getSquareAt(i,j).getHasPiece() && this->getSquareAt(i,j).getPiece() == m_kb){
+                return this->getSquareAt(i,j);
+            }
+        }
+    }
 }
 
 void game::addMove(cmove m){
@@ -25,8 +54,9 @@ void game::addMove(cmove m){
         m_board[m.getEndPos().getPosX()][m.getEndPos().getPosY()].setPiece(m.getPiece());
 
 
-        //m_kingChecked = isChecked(m_whitetoplay);
-        //m_whitetoplay = !m_whitetoplay;
+
+        m_whitetoplay = !m_whitetoplay;
+        //m_kingChecked = isChecked(this->getPlayerKingSquare(), *this);
 
 }
 
@@ -128,6 +158,8 @@ game::game()
     m_kw = new king();
     m_kb = new king();
 
+    m_whitetoplay = 1;
+
     for(int i=0; i<8; i++){
         for(int j=0; j<8; j++){
             m_board[i][j].setPosX(i);
@@ -162,14 +194,9 @@ std::vector<cmove> game::getMoveList() { return m_moveList; }
 void game::setMoveList(std::vector<cmove> val) { m_moveList = val; }
 square game::getSquareAt(int posX, int posY){ return m_board[posX][posY]; }
 bool game::getWhiteToPlay() { return m_whitetoplay; }
-king game::getPlayerKing() {
-    if(m_whitetoplay){
-        return *m_kw;
-    }
-    else{
-        return *m_kb;
-    }
-}
+void game::setWhiteToPlay(bool val){ m_whitetoplay = val; }
+
+
 
 
 

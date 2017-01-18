@@ -1,10 +1,10 @@
 #ifndef ISCKECKED_H_INCLUDED
 #define ISCKECKED_H_INCLUDED
 
-#include "king.h"
+#include "square.h"
 #include "game.h"
 
-bool isChecked(king k, game g);
+bool isChecked(square kingSqr, game g);
 
 
 

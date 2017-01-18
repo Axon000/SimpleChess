@@ -14,6 +14,5 @@ knight::~knight()
 
 bool knight::isMoveOk(game* g, cmove* m) const
 {
-    std::cout << "call in knight" << std::endl;
-    return 1;
+    return 0;
 }

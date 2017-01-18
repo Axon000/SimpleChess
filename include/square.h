@@ -23,6 +23,7 @@ class square
         piece *m_piece;
         int m_posX;
         int m_posY;
+        int id;
         //enum color{White, Black};
 };
 

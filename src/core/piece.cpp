@@ -2,8 +2,8 @@
 #include "piece.h"
 #include "cmove.h"
 #include "game.h"
-#include "isChecked.h"
 
+using namespace std;
 
 piece::piece()
 {
@@ -18,26 +18,19 @@ piece::~piece()
 
 bool piece::isMoveOk(game* g, cmove* m) const {
 
-    std::cout << "call in piece" << std::endl;
-
-    bool output = 0;
-
     bool hasPiece = m->getStartPos().getHasPiece();
     bool goodTeam = (m->getStartPos().getPiece()->getIsWhite() && g->getWhiteToPlay()) || (!m->getStartPos().getPiece()->getIsWhite() && !g->getWhiteToPlay());
 
 
+
     if(hasPiece && goodTeam){
 
-        game cpy = *g;
-        cpy.addMove(*m);
-        king king = g->getPlayerKing() ;
-        if(!isChecked(king,cpy)){
-            output = 1;
-        }
+        return 1;
 
     }
-
-    return 1;
+    else{
+        return 0;
+    }
 }
 
 

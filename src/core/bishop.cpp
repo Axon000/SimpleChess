@@ -14,6 +14,5 @@ bishop::~bishop()
 
 bool bishop::isMoveOk(game* g, cmove* m) const
 {
-    std::cout << "call in bishop" << std::endl;
-    return 1;
+    return 0;
 }

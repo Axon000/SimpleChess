@@ -23,10 +23,10 @@ class game
         void castMove(cmove nextcmove);
         void setStartPosition();
         bool checkMove(piece const& p, cmove m);
-        bool isChecked(bool whitetoplay);
         bool getWhiteToPlay();
+        void setWhiteToPlay(bool val);
         void addMove(cmove m);
-        king getPlayerKing();
+        square getPlayerKingSquare();
 
 
 
