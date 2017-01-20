@@ -1,8 +1,8 @@
 #include <iostream>
+#include "misc.h"
 #include "game.h"
 #include "cmove.h"
-#include "translate.h"
-#include "printBoard.h"
+
 
 using namespace std;
 

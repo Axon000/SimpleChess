@@ -1,12 +1,11 @@
 # depslib dependency file v1.0
-1484671723 source:/home/antoine/cpp/SimpleChess/main.cpp
+1484842581 source:/home/antoine/cpp/SimpleChess/main.cpp
 	<iostream>
+	"misc.h"
 	"game.h"
 	"cmove.h"
-	"translate.h"
-	"printBoard.h"
 
-1484749332 /home/antoine/cpp/SimpleChess/include/game.h
+1484844369 /home/antoine/cpp/SimpleChess/include/game.h
 	<vector>
 	"cmove.h"
 	"square.h"
@@ -76,9 +75,12 @@
 	"translate.h"
 	"game.h"
 
-1484750586 source:/home/antoine/cpp/SimpleChess/src/core/game.cpp
+1484947889 source:/home/antoine/cpp/SimpleChess/src/core/game.cpp
 	<iostream>
+	<fstream>
 	<vector>
+	<string>
+	<cstring>
 	"game.h"
 	"cmove.h"
 	"square.h"
@@ -95,7 +97,7 @@
 	"cmove.h"
 	"game.h"
 
-1484750586 source:/home/antoine/cpp/SimpleChess/src/core/piece.cpp
+1484947572 source:/home/antoine/cpp/SimpleChess/src/core/piece.cpp
 	<iostream>
 	"piece.h"
 	"cmove.h"
@@ -105,9 +107,13 @@
 	<iostream>
 	"square.h"
 
-1484744649 source:/home/antoine/cpp/SimpleChess/src/core/bishop.cpp
+1484948324 source:/home/antoine/cpp/SimpleChess/src/core/bishop.cpp
 	<iostream>
+	<stdlib.h>
+	"misc.h"
 	"bishop.h"
+	"cmove.h"
+	"game.h"
 
 1484680437 /home/antoine/cpp/SimpleChess/include/bishop.h
 	"piece.h"
@@ -124,21 +130,35 @@
 1484680437 /home/antoine/cpp/SimpleChess/include/knight.h
 	"piece.h"
 
-1484744649 source:/home/antoine/cpp/SimpleChess/src/core/king.cpp
+1484832933 source:/home/antoine/cpp/SimpleChess/src/core/king.cpp
 	<iostream>
+	<stdlib.h>
 	"king.h"
+	"cmove.h"
+	"game.h"
 
-1484744649 source:/home/antoine/cpp/SimpleChess/src/core/knight.cpp
+1484949290 source:/home/antoine/cpp/SimpleChess/src/core/knight.cpp
 	<iostream>
+	<stdlib.h>
 	"knight.h"
+	"cmove.h"
+	"game.h"
 
-1484744649 source:/home/antoine/cpp/SimpleChess/src/core/queen.cpp
+1484948719 source:/home/antoine/cpp/SimpleChess/src/core/queen.cpp
 	<iostream>
+	<stdlib.h>
+	"misc.h"
 	"queen.h"
+	"cmove.h"
+	"game.h"
 
-1484744649 source:/home/antoine/cpp/SimpleChess/src/core/rook.cpp
+1484947889 source:/home/antoine/cpp/SimpleChess/src/core/rook.cpp
 	<iostream>
+	<stdlib.h>
+	"misc.h"
 	"rook.h"
+	"cmove.h"
+	"game.h"
 
 1484678067 /home/antoine/cpp/SimpleChess/include/cmove.h
 	"square.h"
@@ -160,4 +180,16 @@
 1484741240 /home/antoine/cpp/SimpleChess/include/isChecked.h
 	"square.h"
 	"game.h"
+
+1484843493 /home/antoine/cpp/SimpleChess/include/misc.h
+	"cmove.h"
+	"game.h"
+	"square.h"
+
+1484843493 source:/home/antoine/cpp/SimpleChess/src/core/misc.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"game.h"
+	"square.h"
 

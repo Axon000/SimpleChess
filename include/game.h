@@ -27,6 +27,7 @@ class game
         void setWhiteToPlay(bool val);
         void addMove(cmove m);
         square getPlayerKingSquare();
+        bool getNoColorCheckMode();
 
 
 
@@ -38,6 +39,7 @@ class game
         bool m_whiteHasRooked;
         bool m_blackHasRooked;
         bool m_kingChecked;
+
         std::vector<rook*> m_rw;
         std::vector<rook*> m_rb;
         std::vector<pawn*> m_pw;
@@ -50,6 +52,11 @@ class game
         std::vector<queen*> m_qb;
         king* m_kw;
         king* m_kb;
+
+        bool m_freemode;
+        bool m_nocolorcheckmode;
+        bool m_noking;
+
 };
 
 #endif // GAME_H

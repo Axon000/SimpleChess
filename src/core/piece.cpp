@@ -19,11 +19,14 @@ piece::~piece()
 bool piece::isMoveOk(game* g, cmove* m) const {
 
     bool hasPiece = m->getStartPos().getHasPiece();
-    bool goodTeam = (m->getStartPos().getPiece()->getIsWhite() && g->getWhiteToPlay()) || (!m->getStartPos().getPiece()->getIsWhite() && !g->getWhiteToPlay());
+    bool goodTeam = g->getNoColorCheckMode() || (m->getStartPos().getPiece()->getIsWhite() == g->getWhiteToPlay());
+    bool noTeammate = !m->getEndPos().getHasPiece() || (m->getEndPos().getPiece()->getIsWhite() != m->getPiece()->getIsWhite());
 
 
+    cout << "goodTeam " << goodTeam << endl;
+    cout << "team white " << g->getWhiteToPlay() << endl;
 
-    if(hasPiece && goodTeam){
+    if(hasPiece && goodTeam && noTeammate){
 
         return 1;
 
